@@ -73,3 +73,4 @@ Contexto: TrendGear es una tienda en línea ficticia de dispositivos tecnológic
 - Su método de envío preferido
 
 Este sistema permite gestionar esa información de forma eficiente y organizada.
+
