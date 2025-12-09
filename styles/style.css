@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #accfda;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    width: 100%;
+    padding: 30px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    align-items: center;
+    text-align: center;
+}
+
+.header h1 img{
+    width: 60px;
+    vertical-align: middle;
+    margin-left: 1px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1em;
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #4f6dac;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+input, select {
+    padding: 10px 14px;
+    border: 1px solid #c4c1f5;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #1e3c72;
+}
+
+#addBtn {
+    grid-column: 1 / -1;
+    padding: 12px 24px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+#addBtn:hover {
+    background: #2a5298;
+}
+
+.client-list {
+    list-style: none;
+}
+
+.client-item {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    border-left: 4px solid #1e3c72;
+}
+
+.client-item.inactive {
+    opacity: 0.5;
+    border-left-color: #dc3545;
+}
+
+.client-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.client-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e3c72;
+}
+
+.client-status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.client-status.active {
+    background: #28a745;
+    color: white;
+}
+
+.client-status.inactive {
+    background: #dc3545;
+    color: white;
+}
+
+.client-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #555;
+}
+
+.detail-item {
+    display: flex;
+    gap: 5px;
+}
+
+.detail-label {
+    font-weight: 600;
+}
+
+.client-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-activate {
+    background: #28a745;
+    color: white;
+}
+
+.btn-activate:hover {
+    background: #218838;
+}
+
+.btn-deactivate {
+    background: #ffc107;
+    color: #333;
+}
+
+.btn-deactivate:hover {
+    background: #e0a800;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #c82333;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6c757d;
+    font-size: 18px;
+}
+
+.empty-state svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+    opacity: 0.3;
+}

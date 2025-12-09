@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendGear - Gestión de Clientes</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TrendGear <img src="snoopy.jpg"></h1>
+            <p class="subtitle">Sistema de Gestión de Compras</p>
+        </div>
+        
+        <div class="input-container">
+            <div class="input-group">
+                <label for="clientName">Nombre del Cliente</label>
+                <input type="text" id="clientName" placeholder="Ej: Juan Pérez">
+            </div>
+            
+            <div class="input-group">
+                <label for="clientEmail">Email</label>
+                <input type="email" id="clientEmail" placeholder="cliente@email.com">
+            </div>
+            
+            <div class="input-group">
+                <label for="clientProduct">Producto Comprado</label>
+                <select id="clientProduct">
+                    <option value="Smartphone">Smartphone</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Tablet">Tablet</option>
+                    <option value="Smartwatch">Smartwatch</option>
+                    <option value="Auriculares">Auriculares</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="clientPrice">Precio (USD)</label>
+                <input type="number" id="clientPrice" placeholder="Ej: 599" min="0" step="0.01">
+            </div>
+            
+            <div class="input-group">
+                <label for="clientPayment">Método de Pago</label>
+                <select id="clientPayment">
+                    <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="Transferencia">Transferencia</option>
+                    <option value="Efectivo">Efectivo</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="clientShipping">Método de Envío</label>
+                <select id="clientShipping">
+                    <option value="Express">Express (1-2 días)</option>
+                    <option value="Estándar">Estándar (3-5 días)</option>
+                    <option value="Económico">Económico (7-10 días)</option>
+                    <option value="Recogida">Recogida en tienda</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="purchaseDate">Fecha de Compra</label>
+                <input type="date" id="purchaseDate">
+            </div>
+            
+            <button id="addBtn">Registrar Compra</button>
+        </div>
+        
+        <ul class="client-list" id="clientList"></ul>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
