@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #accfda;
+    background-color: #a4bae4;
     min-height: 100vh;
     padding: 20px;
     display: flex;
@@ -16,9 +16,9 @@ body {
 
 .container {
     background: white;
-    border-radius: 5px;
+    border-radius: 16px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    max-width: 900px;
+    max-width: 950px;
     width: 100%;
     padding: 30px;
 }
@@ -32,14 +32,14 @@ h1 {
     color: #1e3c72;
     margin-bottom: 10px;
     font-size: 2.2em;
-    align-items: center;
-    text-align: center;
 }
 
-.header h1 img{
-    width: 60px;
+
+h1 img {
+    width: 50px;
+    height: 50px;
     vertical-align: middle;
-    margin-left: 1px;
+    margin-left: 10px;
 }
 
 .subtitle {
@@ -61,14 +61,14 @@ h1 {
 
 .input-group label {
     font-size: 14px;
-    color: #4f6dac;
+    color: #555;
     margin-bottom: 4px;
     font-weight: 600;
 }
 
 input, select {
     padding: 10px 14px;
-    border: 1px solid #c4c1f5;
+    border: 2px solid #e0e0e0;
     border-radius: 8px;
     font-size: 14px;
     transition: border-color 0.3s;
@@ -77,6 +77,60 @@ input, select {
 input:focus, select:focus {
     outline: none;
     border-color: #1e3c72;
+}
+
+.combo-wrapper {
+    position: relative;
+    display: flex;
+    gap: 5px;
+}
+
+.combo-input {
+    flex: 1;
+}
+
+.combo-toggle {
+    padding: 10px 12px;
+    background: #f0f0f0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.combo-toggle:hover {
+    background: #e0e0e0;
+}
+
+.combo-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 40px;
+    background: white;
+    border: 2px solid #1e3c72;
+    border-radius: 8px;
+    margin-top: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: none;
+}
+
+.combo-dropdown.show {
+    display: block;
+}
+
+.combo-option {
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.combo-option:hover {
+    background: #f0f0f0;
 }
 
 #addBtn {
@@ -110,16 +164,11 @@ input:focus, select:focus {
     border-left: 4px solid #1e3c72;
 }
 
-.client-item.inactive {
-    opacity: 0.5;
-    border-left-color: #dc3545;
-}
-
 .client-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .client-name {
@@ -128,27 +177,19 @@ input:focus, select:focus {
     color: #1e3c72;
 }
 
-.client-status {
-    padding: 4px 12px;
+.price-badge {
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.client-status.active {
+    font-size: 14px;
+    font-weight: 700;
     background: #28a745;
-    color: white;
-}
-
-.client-status.inactive {
-    background: #dc3545;
     color: white;
 }
 
 .client-details {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 10px;
     margin-bottom: 12px;
     font-size: 14px;
     color: #555;
@@ -156,7 +197,7 @@ input:focus, select:focus {
 
 .detail-item {
     display: flex;
-    gap: 5px;
+    gap: 6px;
 }
 
 .detail-label {
@@ -177,24 +218,6 @@ input:focus, select:focus {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
-}
-
-.btn-activate {
-    background: #28a745;
-    color: white;
-}
-
-.btn-activate:hover {
-    background: #218838;
-}
-
-.btn-deactivate {
-    background: #ffc107;
-    color: #333;
-}
-
-.btn-deactivate:hover {
-    background: #e0a800;
 }
 
 .btn-delete {
