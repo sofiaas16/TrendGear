@@ -79,6 +79,51 @@
         <ul class="client-list" id="clientList"></ul>
     </div>
 
+    <!-- Templates HTML (no se muestran, solo se clonan) -->
+    <template id="emptyStateTemplate">
+        <div class="empty-state">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <div>No hay compras registradas. ¡Agrega una para comenzar!</div>
+        </div>
+    </template>
+
+    <template id="clientItemTemplate">
+        <li class="client-item">
+            <div class="client-header">
+                <span class="client-name" data-field="name"></span>
+                <span class="price-badge" data-field="price"></span>
+            </div>
+            <div class="client-details">
+                <div class="detail-item">
+                    <span class="detail-label">📧 Email:</span>
+                    <span data-field="email"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">📱 Producto:</span>
+                    <span data-field="product"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">💳 Pago:</span>
+                    <span data-field="payment"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">🚚 Envío:</span>
+                    <span data-field="shipping"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">📅 Fecha:</span>
+                    <span data-field="purchaseDate"></span>
+                </div>
+            </div>
+            <div class="client-actions">
+                <button class="btn btn-delete" data-field="deleteBtn">Eliminar</button>
+            </div>
+        </li>
+    </template>
+
     <script src="scripts/script.js"></script>
 </body>
 </html>
